@@ -1,0 +1,17 @@
+main = do
+    in0 <- getLine
+    let n = read in0 :: Int
+    res <- bla n n
+    print res
+
+bla :: Int -> Int -> IO Int
+bla 0 ma = return ma
+bla n ma = do
+    in2 <- getLine
+    let x = read in2 :: Int
+    y <- bla (n - 1) ma
+    return (max x y)
+
+-- ChatGPT hjälpte till här men jag har redan gjort läxan klart (det här är tredje Kattis-problemet jag löser med Haskell), så jag får använda AI jättemycket nu
+
+-- https://open.kattis.com/submissions/19058415
